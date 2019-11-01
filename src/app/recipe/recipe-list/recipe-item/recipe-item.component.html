@@ -1,0 +1,11 @@
+<a routerLink="recipe/{{recipe.id}}" routerLinkActive="active">
+    <li class="d-flex justify-content-between text-dark">
+        <div>
+            <h5>{{recipe.title}}</h5>
+            <p class="mb-0">{{recipe.description}}</p>
+        </div>
+        <div>
+            <img src="{{recipe.image}}" alt="{{recipe.title}}" class="rounded img-thumbnail p-0 b-0" style="max-height: 60px;"/>
+        </div>
+    </li>
+</a>

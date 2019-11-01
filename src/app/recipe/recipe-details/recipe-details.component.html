@@ -1,0 +1,24 @@
+<div *ngIf="recipe" class="container">
+    <div class="row">
+        <div class="col-md-6 col-12 offset-md-3">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <p class="m-0"><strong>{{recipe.title}}</strong></p>
+                </div>
+                <div class="card-body p-0">
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}" class="img-responsive w-100">
+                    <p class="px-3 py-4 m-0">{{recipe.description}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a routerLink="/" class="btn btn-sm btn-secondary">Go back</a>
+                    <button *ngIf="!inCart" class="btn btn-sm btn-primary" (click)="addToCart(recipe.id)">Add to cart</button>
+                    <div *ngIf="inCart" class="btn-group btn-sm">
+                        <button class="btn btn-primary btn-sm" (click)="decrementCart(cart)">-</button>
+                        <input type="button" class="btn btn-light btn-sm" value="{{cart.count}}"/>
+                        <button class="btn btn-primary btn-sm" (click)="incrementCart(cart)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
