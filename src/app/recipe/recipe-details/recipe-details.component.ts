@@ -46,7 +46,7 @@ export class RecipeDetailsComponent implements OnInit {
       this.cart = this.cartService.getItem(+params.get('id'))[0]
       if(this.cart){
         this.inCart = true
-      }
+      } else this.inCart = false
     })
   }
 
