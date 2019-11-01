@@ -29,15 +29,14 @@ export class RecipeDetailsComponent implements OnInit {
     console.log(this.cart)
   }
 
-  incrementCart(item):void{
-    
+  incrementCart(item):void{  
     this.cart = this.cartService.updateCart(item,'inc')
     console.log(this.cart)
   }
 
   decrementCart(item):void{
     this.cart = this.cartService.updateCart(item,'dec')
-    console.log(this.cart)
+    if(!this.cart) this.inCart = false
   }
 
   ngOnInit() {

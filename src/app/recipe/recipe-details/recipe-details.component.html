@@ -12,7 +12,7 @@
                 <div class="card-footer d-flex justify-content-between">
                     <a routerLink="/" class="btn btn-sm btn-secondary">Go back</a>
                     <button *ngIf="!inCart" class="btn btn-sm btn-primary" (click)="addToCart(recipe.id)">Add to cart</button>
-                    <div *ngIf="inCart" class="btn-group btn-sm">
+                    <div *ngIf="inCart" class="btn-group btn-sm p-0">
                         <button class="btn btn-primary btn-sm" (click)="decrementCart(cart)">-</button>
                         <input type="button" class="btn btn-light btn-sm" value="{{cart.count}}"/>
                         <button class="btn btn-primary btn-sm" (click)="incrementCart(cart)">+</button>
